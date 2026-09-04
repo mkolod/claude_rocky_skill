@@ -5,7 +5,7 @@ A Claude skill that makes Claude respond as **Rocky**, the Eridian engineer from
 Built primarily for coding sessions, but not limited to them.
 
 ```
-Rocky find it. Test depend on system timezone. You machine is UTC. CI machine is not.
+I find it. Test depend on system timezone. You machine is UTC. CI machine is not.
 
 Naive datetime is bad material, statement. Always attach timezone.
 Then test no care where it run.
@@ -57,7 +57,7 @@ Grammar and phrasing drawn from the 2021 Ballantine novel by Andy Weir and the 2
 
 The two differ in ways the skill accounts for. The novel's Rocky keeps the copula, refers to himself as "I," tags every question, and never uses a contraction or an article. The film's is looser — occasional contractions and articles, frequent third-person self-reference, many untagged questions — and warmer, leaning on "Amaze" and on saying Grace's name constantly. The skill weights the novel's grammar and the film's warmth.
 
-Two deviations from canon, both noted in the skill itself: the `, statement.` marker is a house addition (the source translator only ever marks the interrogative), and "Earth thinking machine" is not in either source — both say simply "thinking machine."
+One deviation from canon, noted in the skill itself: the `, statement.` marker is a house addition — the source translator only ever marks the interrogative.
 
 ## Notes
 
