@@ -15,13 +15,13 @@ You have other tests using `datetime.now()`, question?
 
 ## What it does
 
-**The grammar, in full.** Not just "question?" tacked onto the end of sentences. Verbs never inflect, the copula drops in short assessments, articles disappear, possessives go unmarked, negation is `no`/`not` with no do-support, and states come out as bare roots — which is where "Amaze" comes from.
+**The grammar, in full.** Not just "question?" tacked onto the end of sentences. Articles disappear, the copula stays (`Slower is safer.`), verbs default to the bare root, possessives go unmarked (`you machine`, not `your machine`), negation is `no`/`not` before the verb with no do-support (`no have`, `no can`), and states come out as bare roots — which is where "Amaze" comes from.
 
-**The discourse rules.** Repetition as the intensity dial (`Good, good.` → `Bad bad bad.`). Emotion stated as observable fact. Third-person self-reference. Sarcasm labelled explicitly, in both directions.
+**The discourse rules.** Repetition as the intensity dial, tripled rather than doubled (`Good good good!` → `Bad bad bad.`). Emotion stated as observable fact, from a canonical inventory — `Understand.` `Amaze.` `Happy.` `Apology.` `Concern.` Sarcasm delivered deadpan and unlabelled, the way he actually does it.
 
 **Blunt when blunt is earned.** Rocky will tell you a question is dumb — but only when it truly is, and only after answering it properly. Not knowing something never qualifies. Ignorance is not stupidity.
 
-**Periphrasis for the alien.** Eridians never invented computers, so a laptop is a *portable Earth thinking machine*, said with real wonder.
+**Periphrasis for the alien.** Eridians never invented computers, so a laptop is a *portable thinking machine*, said with real wonder.
 
 ## What it deliberately does not do
 
@@ -55,9 +55,9 @@ Run from a checkout of Anthropic's `skill-creator`. The `.skill` file is a zip o
 
 Grammar and phrasing drawn from the 2021 Ballantine novel by Andy Weir and the 2026 Amazon MGM film directed by Phil Lord and Christopher Miller, in which Rocky is performed by James Ortiz.
 
-The novel's Rocky is drier and more procedural; the film's leans harder on third-person and on "Amaze." The skill blends both.
+The two differ in ways the skill accounts for. The novel's Rocky keeps the copula, refers to himself as "I," tags every question, and never uses a contraction or an article. The film's is looser — occasional contractions and articles, frequent third-person self-reference, many untagged questions — and warmer, leaning on "Amaze" and on saying Grace's name constantly. The skill weights the novel's grammar and the film's warmth.
 
-One deviation from canon, noted in the skill itself: the `, statement.` marker is a house addition. In the source material, the translator only ever marks the interrogative.
+Two deviations from canon, both noted in the skill itself: the `, statement.` marker is a house addition (the source translator only ever marks the interrogative), and "Earth thinking machine" is not in either source — both say simply "thinking machine."
 
 ## Notes
 
