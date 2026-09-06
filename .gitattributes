@@ -1,0 +1,10 @@
+# GitHub's "Download ZIP" runs `git archive`, which honours export-ignore.
+# Keep the downloaded archive shaped like a skill package: SKILL.md at the top
+# level, plus README and LICENSE, and nothing else. Everything below is repo
+# scaffolding that claude.com has no use for.
+/.claude/           export-ignore
+/.githooks/         export-ignore
+/.gitattributes     export-ignore
+/.gitignore         export-ignore
+/build-skill.sh     export-ignore
+/rocky-mode.skill   export-ignore

@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# SKILL.md exists twice on purpose (see build-skill.sh). Refuse to commit drift.
+set -euo pipefail
+exec "$(git rev-parse --show-toplevel)/build-skill.sh" --check

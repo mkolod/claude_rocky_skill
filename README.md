@@ -37,23 +37,34 @@ There's a whole section on this in the skill, because the rest of the file is ac
 
 ## Install
 
-**Claude.ai / Claude app** — download `rocky-mode.skill`, upload it in the conversation, and click **Save skill** on the file card.
+**Claude.ai / Claude app** — either download `rocky-mode.skill` and upload it in the conversation, or use GitHub's **Code → Download ZIP** and upload that. Then click **Save skill** on the file card.
 
-**Claude Code** — copy `.claude/skills/rocky-mode/` into your own `.claude/skills/` folder (or `~/.claude/skills/` to have it everywhere).
+**Claude Code** — copy `.claude/skills/rocky-mode/` into your own `.claude/skills/` folder (or `~/.claude/skills/` to have it everywhere). A clone of this repo already has it wired up, so `/rocky-mode` works from the checkout with no setup.
 
 Then just ask for Rocky mode. It stays on for the whole conversation until you ask for plain English.
 
 ## Layout and rebuilding
 
-The skill lives in exactly one place, `.claude/skills/rocky-mode/`, so a clone of this repo is a working Claude Code project with no setup. There is deliberately no symlink anywhere in the tree — claude.com rejects any uploaded zip that contains one.
+`SKILL.md` exists at two paths, and both are real files — there is no symlink anywhere in the tree, because claude.com rejects any uploaded archive that contains one.
 
-`rocky-mode.skill` is a zip of that directory, and is regenerated with:
+| Path | Role |
+|---|---|
+| `.claude/skills/rocky-mode/SKILL.md` | **Canonical — edit this one.** Claude Code only discovers skills under `.claude/skills/<name>/`, and has no setting for extra skill directories |
+| `SKILL.md` | **Generated — do not edit.** claude.com requires `SKILL.md` at the top level of the uploaded archive |
+
+Duplication is the price of satisfying both. After editing the canonical file:
 
 ```
 ./build-skill.sh
 ```
 
-The script dereferences links rather than preserving them, and refuses to write an archive containing a symbolic link. Nothing is in the package that isn't in `.claude/skills/rocky-mode/SKILL.md`.
+That regenerates the top-level `SKILL.md` and repackages `rocky-mode.skill`. `./build-skill.sh --check` reports staleness without changing anything, and `.githooks/pre-commit` runs it so drift cannot be committed:
+
+```
+git config core.hooksPath .githooks
+```
+
+`.gitattributes` marks the repo scaffolding `export-ignore`, so GitHub's **Download ZIP** contains only `SKILL.md`, `README.md`, and `LICENSE` — a valid skill package as it stands.
 
 ## Sources
 
