@@ -39,17 +39,21 @@ There's a whole section on this in the skill, because the rest of the file is ac
 
 **Claude.ai / Claude app** — download `rocky-mode.skill`, upload it in the conversation, and click **Save skill** on the file card.
 
-**Claude Code** — drop the `rocky-mode/` directory into your skills folder.
+**Claude Code** — copy `.claude/skills/rocky-mode/` into your own `.claude/skills/` folder (or `~/.claude/skills/` to have it everywhere).
 
 Then just ask for Rocky mode. It stays on for the whole conversation until you ask for plain English.
 
-## Rebuilding the package
+## Layout and rebuilding
+
+The skill lives in exactly one place, `.claude/skills/rocky-mode/`, so a clone of this repo is a working Claude Code project with no setup. There is deliberately no symlink anywhere in the tree — claude.com rejects any uploaded zip that contains one.
+
+`rocky-mode.skill` is a zip of that directory, and is regenerated with:
 
 ```
-python -m scripts.package_skill rocky-mode
+./build-skill.sh
 ```
 
-Run from a checkout of Anthropic's `skill-creator`. The `.skill` file is a zip of the skill directory — nothing in it that isn't in `rocky-mode/SKILL.md`.
+The script dereferences links rather than preserving them, and refuses to write an archive containing a symbolic link. Nothing is in the package that isn't in `.claude/skills/rocky-mode/SKILL.md`.
 
 ## Sources
 
